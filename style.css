@@ -1,0 +1,47 @@
+/* Basic page setup */
+body {
+  margin: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  flex-direction: column;  /* Stack heading and buttons vertically */
+  font-family: Arial, sans-serif;
+  /* Background with three horizontal stripes (red, white, green) */
+  background: linear-gradient(
+    to bottom,
+    red 33.3%, 
+    white 33.3% 66.6%, 
+    green 66.6%
+  );
+}
+
+/* Main heading style */
+h1 {
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent background for readability */
+  padding: 20px 40px;
+  border-radius: 10px;
+  color: black;
+}
+
+/* Language switch buttons container */
+.lang-switch {
+  margin-top: 20px; /* Space between heading and buttons */
+}
+
+/* Language switch buttons style */
+.lang-switch button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  transition: background-color 0.2s; /* Smooth hover effect */
+}
+
+/* Hover effect for buttons */
+.lang-switch button:hover {
+  background-color: #ddd;
+}
