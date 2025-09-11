@@ -41,6 +41,18 @@ h1 {
   transition: background-color 0.2s; /* Smooth hover effect */
 }
 
+#lang-flag {
+  position: fixed;       /* fix a képernyőn */
+  top: 20px;             /* távolság a tetejtől */
+  right: 20px;           /* távolság a jobb szélétől */
+  width: 40px;           /* méret */
+  height: auto;
+  border: 2px solid black; /* fekete keret */
+  border-radius: 5px;      /* opcionális lekerekítés */
+  cursor: pointer;         /* kattintható legyen */
+  z-index: 1000;           /* mindig felül legyen */
+}
+
 /* Hover effect for buttons */
 .lang-switch button:hover {
   background-color: #ddd;
