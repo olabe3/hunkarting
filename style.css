@@ -19,8 +19,10 @@ body {
 /* Main heading style */
 h1 {
   background: rgba(255, 255, 255, 0.7); /* Semi-transparent background for readability */
-  padding: 20px 40px;
+  padding: 5vw;
   border-radius: 10px;
+  font-size: 5vw;            /* Responsive font size */
+  max-width: 90%;            /* Don't overflow small screens */
   color: black;
 }
 
@@ -31,18 +33,34 @@ h1 {
 
 /* Language switch buttons style */
 #lang-flag {
-  position: fixed;       /* fix a képernyőn */
-  top: 20px;             /* távolság a tetejtől */
-  right: 20px;           /* távolság a jobb szélétől */
-  width: 40px;           /* méret */
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 40px;
   height: auto;
-  border: 2px solid black; /* fekete keret */
-  border-radius: 5px;      /* opcionális lekerekítés */
-  cursor: pointer;         /* kattintható legyen */
-  z-index: 1000;           /* mindig felül legyen */
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s;
 }
 
 /* Hover effect for buttons */
 .lang-switch button:hover {
   background-color: #ddd;
+  transform: scale(1.1);
+}
+
+/* 🔹 Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 6vw;    /* Slightly larger relative font on mobile */
+    padding: 4vw;
+  }
+
+  #lang-flag {
+    width: 30px;       /* Smaller flag on mobile */
+    top: 10px;
+    right: 10px;
+  }
 }
